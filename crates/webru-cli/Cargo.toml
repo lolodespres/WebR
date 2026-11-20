@@ -1,0 +1,13 @@
+[package]
+name = "webru-cli"
+description = "Ligne de commande `webru`"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "webru"
+path = "src/main.rs"
+
+[dependencies]
+webru-lexer = { path = "../webru-lexer" }

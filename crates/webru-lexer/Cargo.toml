@@ -1,0 +1,6 @@
+[package]
+name = "webru-lexer"
+description = "Lexer de webRu : texte source -> jetons"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true

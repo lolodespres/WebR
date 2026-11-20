@@ -1,0 +1,16 @@
+// L'exemple du cahier des charges.
+// Pour l'instant, seul le lexer sait le lire : `cargo webru tokens examples/bienvenue.wru`
+
+// Typage fort, pas de point-virgule, gestion native de l'absence de valeur
+fn getUserName(int $id): Option<string> {
+    $user = Database::find($id)
+
+    // Retourne None automatiquement si $user est absent
+    return $user?->name
+}
+
+// Gestion native et sécurisée de la session
+$session['visits'] = ($session['visits'] ?? 0) + 1
+$name = getUserName(42) ?? "Visiteur anonyme"
+
+echo "Bienvenue $name, visite n° {$session['visits']}"

@@ -1,0 +1,3 @@
+# Raccourci : `cargo webru tokens examples/bienvenue.wru`
+[alias]
+webru = "run -q -p webru-cli --"
